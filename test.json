@@ -1,0 +1,20 @@
+{
+    "package": {
+        "name": "parsec-clients",
+        "repo": "gradle",
+        "subject": "yamlin",
+        "desc": "I was pushed completely automatically"
+    },
+
+
+    "version": {
+        "name": "0.5"
+    },
+
+    "files":
+        [
+        {"includePattern": "parsec-client/build/libs/parsec-client.jar"}
+        {"includePattern": "parsec-client/build/publications/UnofficialPublication/pom-default.xml"}
+        ],
+    "publish": true
+}

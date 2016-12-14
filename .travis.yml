@@ -1,15 +1,18 @@
 language: java
-
 jdk:
-  - oraclejdk8
-
+- oraclejdk8
 before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 cache:
   directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
-
+  - $HOME/.gradle/caches/
+  - $HOME/.gradle/wrapper/
 after_success:
-  - ./gradlew coveralls
+- ./gradlew coveralls
+deploy:
+  provider: bintray
+  file: test.json
+  user: yamlin
+  key:
+    secure: iKZaBxsJO/dDc0E0oOy2aGIrigTFxggLtuJIBJIK+H1cOF8xKPzEa2F4K4S1kjntLBhhawyUINCkcoidt3HhxcjgqzfsKxrOaoUoNwWv8YVRMqltnhoRUz6oXwDgsh1vQ9TYA4Ae8iSjFBwifKRK+uKMN0EXuUKr8S7UH+8LFlnFTZAFo4SUvwS8XoPp2VU/vdSULAS+OTcuPRQlG6LEp/9rmBtdy2CGd20mvbUfUBGZc3mue4iwHsTCVnJQcnR85pMyeMdj1uscH7V7RYUe+Lmkwx1AHZ7gqX2F1dI1yXe6sQwas0pJKEdJ228lBD0twzpPonhzIzudPiSuFVRE3eUuAzONcTNjoP/C7xJd0tErcUwwD5vCJJr04LCbEuPfoWoPhYnMXDhgIYQJXGmZA6yEBGmASkq4/QZfnuT01ou/1EQ0LqXTWdgk42+/K3/m5DmCPf6li/ZvfwjuJsvkCygfYxok8y6gPEJJ8mt5YgbvarMQAYuxGa9mZ2RPKj1mrecE1CB0gx+MBE2dZUA+dCQZlZJY130g08acUfMEMqIvnE94GYzcIZsQVlzgZ6Wu37Q8gE0NF4Fkd5QeRuGSBRbDGd1A/WYPhjXBz8yfdjnXUVG1l8KagZNO+KnlRCBrecMzTicMWG06uy0wX8m1GAIhXgU8g96cmSG8KZ6OPlI=

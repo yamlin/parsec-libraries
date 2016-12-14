@@ -30,23 +30,24 @@ subprojects {
     apply plugin: 'com.jfrog.bintray'
 
     bintray {
-        user = bintrayUser
-        key = bintrayKey
+//        user = bintrayUser
+//        key = bintrayKey
 
         publications = ['UnofficialPublication']
 
         publish = true
-        override = false //there's a bug
 
         pkg {
+            
             repo = bintrayRepo
             name = project.name
             licenses = ['Apache-2.0']
             vcsUrl = temporaryVcsUrl
-        }
-
-        pkg.version {
-            name = project.version
+            version {
+                name = 'test'
+                desc = 'test version'
+                released = new java.util.Date()
+            }
         }
     }
 

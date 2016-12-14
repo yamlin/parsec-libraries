@@ -8,13 +8,17 @@
 
 
     "version": {
-        "name": "0.5"
+        "name": "${TRAVIS_TAG}"
     },
 
     "files":
         [
-        {"includePattern": "parsec-clients/build/libs/parsec-client.jar"}
-        {"includePattern": "parsec-clients/build/publications/UnofficialPublication/pom-default.xml"}
+        {"includePattern": "parsec-clients\/build\/libs\/parsec-client.jar",
+         "uploadPattern": "parsec-clients/${TRAVIS_TAG}/$1"
+        },
+        {"includePattern": "parsec-clients\/build\/publications\/UnofficialPublication\/pom-default.xml",
+         "uploadPattern": "parsec-clients/${TRAVIS_TAG}/$1"
+        }
         ],
     "publish": true
 }

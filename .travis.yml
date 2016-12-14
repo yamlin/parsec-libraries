@@ -1,15 +1,18 @@
 language: java
-
 jdk:
-  - oraclejdk8
-
+- oraclejdk8
 before_cache:
-  - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
-  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+- rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+- rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 cache:
   directories:
-    - $HOME/.gradle/caches/
-    - $HOME/.gradle/wrapper/
-
+  - $HOME/.gradle/caches/
+  - $HOME/.gradle/wrapper/
 after_success:
-  - ./gradlew coveralls
+- ./gradlew coveralls
+deploy:
+  provider: bintray
+  file: Path to a descriptor file, containing information for the Bintray upload
+  user: yamlin
+  key:
+    secure: nCuMgXSYvw71/PaT0/Cv3rmw1IH6Gw27E9o1fR57okocp7Z8Bz/XntVv4MocUU6gqu8UKA0bVwcXeZdAoIMZMjzWwVKH9XyIi47ysD4hTe1Y4gphZMgnyMq2F8jO2B8Ir2hi+mEZGo9RJMSMFuAtwFkujAwHoU+XtZ9P6NuN/5wx9IwVlqc3vBsrsCVscWNImQpx5Rw607iU8FkHtMnK+XZjABqxBP0RKtT45fWUwsUiUiudisIH1+3i5yy+CACHU5sgABoDPWf4vb5b5qnB16tZP8awgOWDi252o3tqrAbPGN2thBykh3NZSJRPWRyjEBy1QzE2UNs30xOvBbas21Q50xbn3PhT0XkKz192zJAHA93UCgD2RQUBNBeI21w5fXs9104HT+2CmYPJzF4v+gMgOnOF8/BBQo42r+0XYBnDs13wHGaysz0PO7teQSNBQU828ecdX3JzgXvHNyaigTPhqIdz18u8uhC/deoPYXbBpYo3iBV+YCpEhUNazfQvhRPtvrnCrGcJOKannse4/jhDG5KMsSvLRnD6QlDJASOvqF9n8tTgkSi/Pwhs+yWOWjKSiP2MebYFXCVQxIqMCFOI/S9YR/U5STSjj09UQBF5YwpO9XtGx9a+QMnprxR2ONpDtKkW4a98PEVf120G7W05cfU8lqHoOY0OO2K5470=

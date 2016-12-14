@@ -13,8 +13,8 @@
 
     "files":
         [
-        {"includePattern": "parsec-client/build/libs/parsec-client.jar"}
-        {"includePattern": "parsec-client/build/publications/UnofficialPublication/pom-default.xml"}
+        {"includePattern": "parsec-clients/build/libs/parsec-client.jar"}
+        {"includePattern": "parsec-clients/build/publications/UnofficialPublication/pom-default.xml"}
         ],
     "publish": true
 }

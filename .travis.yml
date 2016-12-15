@@ -10,6 +10,7 @@ cache:
   - $HOME/.gradle/wrapper/
 after_success:
 - ./gradlew coveralls
+- echo "================== travis tag ${TRAVIS_TAG} =================="
 deploy:
   provider: bintray
   file: test.json

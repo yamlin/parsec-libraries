@@ -9,8 +9,8 @@ cache:
   - $HOME/.gradle/caches/
   - $HOME/.gradle/wrapper/
 after_success:
-- ./gradlew coveralls
-- ./gradlew bintrayUpload -PbintrayUser=yamlin -PbintrayKey="{$env.BINTRAY_API_KEY}"
+- echo "{$env.BINTRAY_USER}"
+- ./gradlew bintrayUpload -PbintrayUser=yamlin -PbintrayKey="{$env.BINTRAY_API_KEY}"
 env:
   global:
   - secure: f9VN90xbNhU7ZwL+2ze3bvRFJ4VU8AT8MaHRwkNdmOJGBmws6e3Q2+a5sGjnpmgEwz4nXj+/JPyqkvxS7gZsohLrafbk3cMbDWUnQIDzabai2fhXvN1K9de7bE1UixP/GiyL84u/HolaiDicuag7kO3qGWWKd9v87fMrNEWpaiqzmU2k69cQCSl4S8rEiDQZbE1CWJ+Mz2ucJDQjH07ISf9VDT80WNszY2u2HbTiumYjvoib0xNS365mKwoyzZ4nV7e3SMOReclBek++LlolGngjSwQiliZj8BFGJtoOmvyJfsirTJtQp2hnGvckoLHghNREOwEPAyBGrmpZIP3kh9OJMcg4u6et/dcQqWGDkHgrP9uroJV6cOXciG6q6mbKKdkJI0UafRxiEv4JeTmAmJedC+SsjizO06PX2xB/x94asxZsVuqsmsTDdZ+MYvds0Ix91oGgq+o6WLkAtqsb5+wlbQoVzjg6tu03o4d2wakWpLMKJ4als/vNSDv3poKL4e9XbHrg/lY+m2hi4PFNGfrU6u0uuYc1mETDSIf6Tkc7mchpXZuIVG1auTpI0SMHgFTRWO1moYWdt+Oz5tspLb5CA94p7bcJXx/2f3p8SQDJjihaVSC8rHusUYhuaMoDLVMC///9h1LJUf75NYg0vd9l9lDq5stuyo2pNz3fcaU=

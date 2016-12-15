@@ -9,7 +9,7 @@ cache:
   - $HOME/.gradle/caches/
   - $HOME/.gradle/wrapper/
 after_success:
-- echo "${env.BINTRAY_USER}"
+- echo "${BINTRAY_USER}"
 - ./gradlew bintrayUpload -PbintrayUser=yamlin -PbintrayKey="${env.BINTRAY_API_KEY}"
 env:
   global:

@@ -7,7 +7,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
     }
 }
 
@@ -36,7 +36,7 @@ subprojects {
         publications = ['UnofficialPublication']
         
         publish = true
-
+        override = true
         pkg {
             repo = 'gradle'
             name = project.name

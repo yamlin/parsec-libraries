@@ -30,8 +30,8 @@ subprojects {
     apply plugin: 'com.jfrog.bintray'
 
     bintray {
-//        user = bintrayUser
-//        key = bintrayKey
+        user = bintrayUser
+        key = bintrayKey
 
         publications = ['UnofficialPublication']
 

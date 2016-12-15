@@ -8,7 +8,7 @@ cache:
   directories:
   - $HOME/.gradle/caches/
   - $HOME/.gradle/wrapper/
-after-success:
+after_success:
 - echo "=================================== Success =============================="
 - ./gradlew bintrayUpload
 env:

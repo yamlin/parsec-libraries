@@ -10,7 +10,7 @@ cache:
   - $HOME/.gradle/wrapper/
 
 script:  
-- travis/bintrayUpload.sh
+- ./gradlew bintrayUpload
 
 after_success:
 - echo "=================================== Success =============================="

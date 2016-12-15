@@ -10,7 +10,9 @@ cache:
   - $HOME/.gradle/wrapper/
 after_success:
 - ./gradlew coveralls
-- echo "================== travis tag ${TRAVIS_TAG} =================="
+- echo "================== travis tag ${TRAVIS_TAG} is PR ${TRAVIS_PULL_REQUEST} =================="
+- pwd && ls -al
+
 deploy:
   provider: bintray
   file: test.json

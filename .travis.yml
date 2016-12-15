@@ -9,12 +9,8 @@ cache:
   - $HOME/.gradle/caches/
   - $HOME/.gradle/wrapper/
 
-deploy:
-  provider: script
-  script:  travis/bintrayUpload.sh
-  on:
-    branch: master
-  
+script:  
+- travis/bintrayUpload.sh
 
 after_success:
 - echo "=================================== Success =============================="

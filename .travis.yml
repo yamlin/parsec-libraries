@@ -11,6 +11,7 @@ cache:
   - $HOME/.gradle/wrapper/
 
 after-success:
+- echo "${BINTRAY_USER}"
 - ./gradlew bintrayUpload
 
 env:

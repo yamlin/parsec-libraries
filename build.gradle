@@ -38,15 +38,16 @@ subprojects {
         publish = true
 
         pkg {
-            
-            repo = bintrayRepo
+            repo = 'gradle'
             name = project.name
             licenses = ['Apache-2.0']
-            vcsUrl = temporaryVcsUrl
+            vcsUrl = 'https://github.com/yahoo/parsec-libraries'
+            userOrg = 'yahoo'
             version {
-                name = 'test'
-                desc = 'test version'
+                name = 'bintray'
+                desc = 'The Parsec Libraries'
                 released = new java.util.Date()
+                vcsTag = '0.0.1'
             }
         }
     }

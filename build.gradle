@@ -42,7 +42,7 @@ subprojects {
             name = project.name
             licenses = ['Apache-2.0']
             vcsUrl = 'https://github.com/yahoo/parsec-libraries'
-            userOrg = 'yahoo'
+            userOrg = 'yamlin'
             version {
                 name = 'bintray'
                 desc = 'The Parsec Libraries'

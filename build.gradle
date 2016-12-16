@@ -42,7 +42,7 @@ subprojects {
         user = System.getenv('BINTRAY_USER')
         key = System.getenv('BINTRAY_API_KEY')
 
-        publications = ['UnofficialPublication']
+        // publications = ['UnofficialPublication']
         
         publish = true
         override = true
@@ -63,7 +63,7 @@ subprojects {
 
     publishing {
         publications {
-            UnofficialPublication(MavenPublication) {
+            myPublication(MavenPublication) {
                 from components.java
                 groupId 'com.test.yamlin'
                 artifactId project.name

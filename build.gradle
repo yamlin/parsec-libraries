@@ -70,7 +70,7 @@ subprojects {
                 from components.java
                 groupId 'com.test.yamlin'
                 artifactId project.name
-                version versionPrefix + versionBuild
+    //            version versionPrefix + versionBuild
             }
         }
     }

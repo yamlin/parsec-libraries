@@ -31,8 +31,6 @@ subprojects {
     apply plugin: 'com.jfrog.bintray'
     apply plugin: 'com.nillith.autoversion'
     
-    publish = true
-
     autoVersion {
       major 0
       minor 0

@@ -8,6 +8,7 @@ buildscript {
     }
     dependencies {
         classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+        classpath 'com.nillith.android:autoversion:1.1.0'
     }
 }
 
@@ -28,6 +29,14 @@ allprojects {
 
 subprojects {
     apply plugin: 'com.jfrog.bintray'
+    apply plugin: 'com.nillith.autoversion'
+
+    autoVersion {
+      major 0
+      minor 0
+      patch 1
+      // build 3 // You can provide your own build number to disable auto versionCode update.
+    }
 
     bintray {
         user = System.getenv('BINTRAY_USER')
@@ -58,7 +67,7 @@ subprojects {
                 from components.java
                 groupId 'com.test.yamlin'
                 artifactId project.name
-                version '0.0.0.1'
+                version autoVersion.code
            }
         }
     }

@@ -67,7 +67,7 @@ subprojects {
                 from components.java
                 groupId 'com.test.yamlin'
                 artifactId project.name
-                version autoVersion.code
+                version '0.0.0.1' //autoVersion.code
            }
         }
     }

@@ -28,7 +28,19 @@ allprojects {
 
 subprojects {
     apply plugin: 'com.jfrog.bintray'
-    
+
+    def versionPropsFile = file('version.properties')
+    def versionPrefix = '0.0.0.'
+    def versionBuild
+  
+    if (versionPropsFile.canRead()) {
+        def Properties versionProps = new Properties()
+        versionProps.load(new FileInputStream(versionPropsFile))
+        versionBuild = versionProps['VERSION_BUILD'].toInteger()
+    } else {
+        throw new GradleException("Could not read version.properties!")
+    }
+
     bintray {
         user = System.getenv('BINTRAY_USER')
         key = System.getenv('BINTRAY_API_KEY')
@@ -58,7 +70,7 @@ subprojects {
                 from components.java
                 groupId 'com.test.yamlin'
                 artifactId project.name
-                version '0.0.0.2'
+                version versionPrefix + versionBuild
             }
         }
     }

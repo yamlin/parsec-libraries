@@ -40,15 +40,13 @@ subprojects {
         pkg {
             repo = 'gradle'
             name = project.name
-            licenses = ['Apache-2.0']
-            vcsUrl = 'https://github.com/yahoo/parsec-libraries'
             userOrg = 'yamlin'
-            version {
-                name = 'bintray'
-                desc = 'The Parsec Libraries'
-                released = new java.util.Date()
-                vcsTag = '0.0.1'
-            }
+            licenses = ['Apache-2.0']
+            vcsUrl = parsecVcsUrl
+        }
+
+        pkg.version {
+            name = project.version
         }
     }
 
@@ -56,9 +54,6 @@ subprojects {
         publications {
             UnofficialPublication(MavenPublication) {
                 from components.java
-                groupId 'com.test.yamlin'
-                artifactId project.name
-    //            version versionPrefix + versionBuild
             }
         }
     }

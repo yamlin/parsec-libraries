@@ -32,11 +32,11 @@ subprojects {
     bintray {
         user = System.getenv('BINTRAY_USER')
         key = System.getenv('BINTRAY_API_KEY')
-
+        
         publications = ['UnofficialPublication']
         
         publish = true
-        override = true
+        override = false
         pkg {
             repo = 'gradle'
             name = project.name
